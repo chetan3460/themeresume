@@ -1,0 +1,98 @@
+/*--------------------------------------------------
+	Slowed Pin
+---------------------------------------------------*/
+
+.slowed-pin {
+  position: relative;
+  overflow: hidden;
+  > .pin-spacer {
+    pointer-events: none;
+  }
+  .slowed-text {
+    position: absolute;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 980px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 8vw 20px;
+    z-index: 1;
+    pointer-events: none;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .slowed-text-wrapper {
+    position: relative;
+    display: block;
+  }
+}
+
+.slowed-images {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 0;
+  margin: auto;
+}
+
+.slowed-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0 0px;
+  margin: 150px 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  &:nth-of-type(2n + 2) {
+    align-items: flex-end;
+  }
+  @include sm {
+    margin: 100px 0;
+  }
+  img {
+    width: auto;
+    max-width: 40% !important;
+    height: auto !important;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 10px;
+    -webkit-transform: scale(0.95) translateY(30%);
+    transform: scale(0.95) translateY(30%);
+    @include sm {
+      max-width: 50% !important;
+    }
+  }
+}
+
+.slowed-image:nth-of-type(2n + 2) {
+  align-items: flex-end;
+}
+
+.rounded-borders .slowed-image img {
+  border-radius: 8px;
+}
+.projects {
+  &--block {
+    h2 {
+      font-size: calc(1rem + 4vw);
+      line-height: calc(1rem + 4vw);
+      font-family: $baseFontFamily;
+      color: #b9dfff;
+      @include sm {
+        font-size: clamp(48px, 8.5vw, 130px);
+        line-height: clamp(48px, 8.5vw, 130px);
+      }
+    }
+  }
+}

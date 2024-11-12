@@ -1,0 +1,78 @@
+.ticker-text {
+  &--block {
+    h2 {
+      color: var(--color-blue-700);
+    }
+    h3 {
+      transform: translateX(6rem);
+      @include font-rem(40px, 48px);
+      margin: 0 10px;
+
+      .shape-circle {
+      }
+      @include bp(mobile) {
+        @include font-rem(48px, 52px);
+      }
+      img {
+        @include size(3rem);
+      }
+      span {
+        // white-space: nowrap;
+        /* border: 2px solid #e5433f; */
+        background: var(--color-blue-700);
+        color: #fff;
+        border-radius: 5em;
+        margin: 2px 0;
+        padding: 0.1em 0.5em;
+      }
+    }
+  }
+}
+
+.about {
+  &--parallax-block-wrap {
+    max-width: 900px;
+  }
+  &--medium_image {
+    left: -20%;
+    z-index: 1;
+    width: 120px;
+    height: auto;
+    transform: translateY(-9rem);
+    @include bp(mobile) {
+      width: 100px;
+    }
+    @include bp(sm) {
+      width: 80px;
+      left: -12%;
+    }
+    @include bp(xs) {
+      left: -5%;
+    }
+  }
+  &--large-image {
+    height: 500px;
+    @include bp(mobile) {
+      height: 400px;
+    }
+  }
+  &--small_image {
+    position: absolute;
+    bottom: 30px; /* Equivalent to -bottom-7 */
+    right: -25%;
+    z-index: 10;
+    width: 150px;
+    height: 150px;
+    z-index: -1;
+    transform: translateY(-5rem);
+    @include bp(mobile) {
+      width: 130px;
+      height: auto;
+    }
+  }
+  &--description {
+    p {
+      color: var(--color-blue-700);
+    }
+  }
+}

@@ -1,0 +1,61 @@
+$cl-white: #ffffff;
+$cl-sub: #1d1d1d;
+
+.subtitle {
+  border: 1px solid #f1f1f1;
+  color: #f1f1f1;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 130%; /* 13px */
+  letter-spacing: 2px;
+}
+
+.fade-up-stagger {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.fade-in {
+  opacity: 0;
+}
+
+#gotoTop {
+  position: fixed;
+
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  border-radius: 50%;
+  bottom: 25px;
+  width: 50px;
+  height: 50px;
+  right: 10px;
+  transition: all 0.4s cubic-bezier(0.6, 0.04, 0.12, 0.96);
+  visibility: hidden;
+  z-index: 3;
+  background-color: #f7ef60;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gotoTop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#gotoTop span {
+  content: url("../../assets/images/arrow.svg");
+  // border-bottom: 2px solid #2b6a67;
+  // border-right: 2px solid #2b6a67;
+  // left: 50%;
+  // top: calc(50% + 0.4rem);
+  // // transform: translate(-50%, -50%) rotate(225deg);
+  // // width: 1.5rem;
+  // // height: 1.5rem;
+  // display: block;
+  // position: absolute;
+  width: max-content;
+  // height: 12.74px;
+}

@@ -1,0 +1,192 @@
+footer {
+  // position: -webkit-sticky;
+
+  // position: sticky;
+  // bottom: 0;
+  // overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+  [data-sticky-footer] {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    overflow: hidden;
+  }
+}
+.footer {
+  &__inner {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    @include bp(mobile) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    .module-btn {
+      @include font-rem(100px, 75px);
+      vertical-align: middle;
+      transition: color 0.3s;
+      @include bp(mobile) {
+        @include font-rem(82px, 65px);
+      }
+      @include bp(sm) {
+        @include font-rem(60px, 65px);
+      }
+    }
+    .module-title {
+      @include font-rem(42px, 51px);
+      color: #181b31;
+      text-transform: unset;
+    }
+    .divider-separator {
+      border-color: #181b31;
+      border-style: solid;
+      border-width: 3px;
+      max-width: 130px;
+      width: 130px;
+      // width: 100%;
+    }
+  }
+  &__marquee {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    color: rgba($cl-white, 0.16);
+    background-color: rgba(0, 0, 0, 1);
+    transition: color $dur-default ease;
+    &:hover {
+      color: rgba($cl-white, 0.2);
+      // .footer__marquee-wrap {
+      //     transform: translate(-4%);
+      // }
+      // .footer__marquee-item {
+      //     animation-play-state: paused;
+      // }
+    }
+    &-wrap {
+      padding-top: 3.4rem;
+      padding-bottom: 2.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-wrap: nowrap;
+      transform: translate(0);
+      transition: transform 1.6s ease-out;
+      @include md {
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+      }
+    }
+    &-item {
+      padding-right: 3rem;
+      white-space: nowrap;
+      font-size: 150px;
+      line-height: 172.5px;
+      font-family: $baseFontFamily;
+      animation-name: rtl;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-duration: 20s;
+      animation-play-state: running;
+      width: max-content;
+      will-change: transform, width;
+      @include md {
+        font-size: 98px;
+        line-height: 105px;
+      }
+      @include sm {
+        font-size: 58px;
+        line-height: 63px;
+      }
+    }
+  }
+  &__cursor {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    pointer-events: none;
+    &-main {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-between;
+      pointer-events: auto;
+      position: absolute;
+      color: rgba($cl-white, 1);
+      font-family: $baseFontFamily;
+      width: 100px;
+      height: 100px;
+      background-color: rgba($cl-orange, 1);
+      top: 0;
+      left: 0;
+      @include transform(translate(-50%, -50%));
+      opacity: 0;
+      @include transition(opacity $dur-default ease);
+    }
+  }
+  &__marquee:hover {
+    .footer__cursor-main {
+      opacity: 1;
+    }
+  }
+}
+@keyframes rtl {
+  0% {
+    transform: translateZ(0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.arr-wrap {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.arr-wrap .arr-ic-main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.icon svg {
+  width: 100%;
+  height: auto;
+}
+.arr-wrap .arr-ic-clone {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: auto;
+  transform: translate(-150%, 150%);
+}
+.arr-hover:hover .arr-ic-main {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.1, 1);
+  transform: translate(150%, -150%);
+}
+.arr-hover:hover .arr-ic-clone {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.1, 1);
+  transform: translate(0);
+}

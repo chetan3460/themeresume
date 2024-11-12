@@ -1,0 +1,299 @@
+/* ==========================================================================
+   Base Type
+   ========================================================================== */
+* {
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    &::-moz-focus-inner {
+      border: 0;
+    }
+
+    outline: 0;
+  }
+}
+
+html {
+  @include font-rem($htmlFontSize);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  //@include font-rem($htmlFontSize);
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $baseTextColor;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // overflow-x: hidden;
+  letter-spacing: 0.2px;
+  // background: #0f4853;
+  p {
+    @include font-rem(18px, 22px);
+    font-family: $baseFontFamily;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include bp(mobile) {
+      @include font-rem(15px, 25px);
+      letter-spacing: 0;
+    }
+  }
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: $baseFontFamily;
+}
+
+/* ==========================================================================
+   Headings and paragraph
+   ========================================================================== */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-style: normal;
+  font-family: $headingFontFamily;
+  margin-bottom: 0px;
+  // @extend %baseSpacing;
+  color: color(primary, pink);
+}
+
+h1,
+.h1 {
+  @include font-rem(134px, 107.2px);
+  letter-spacing: -0.01em;
+  font-weight: 800;
+  text-transform: unset;
+  @include bp(tablet-sm) {
+    @include font-rem(48px, 53px);
+  }
+}
+
+h2,
+.h2 {
+  @include font-rem(110px, 88px);
+  font-weight: 800;
+  letter-spacing: -1.1px;
+  color: color(white, 200);
+  @include bp(mobile) {
+    @include font-rem(60px, 70px);
+    letter-spacing: -1.28px;
+  }
+}
+
+h3,
+.h3 {
+  @include font-rem(45px, 44px);
+  font-weight: 700;
+  letter-spacing: -1.33333px;
+  @include bp(mobile) {
+    @include font-rem(20px, 22px);
+    letter-spacing: -0.801px;
+  }
+}
+
+h4,
+.h4 {
+  @include font-rem(20px, 36px);
+  font-weight: 700;
+}
+
+h5,
+.h5 {
+  @include font-rem(16px, 20.8px);
+  font-weight: 600;
+
+  @include bp(mobile) {
+    @include font-rem(18px, 21.6px);
+  }
+}
+
+h6,
+.h6 {
+  @include font-rem(16px, 20.8px);
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+li {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+a {
+  color: inherit;
+  transition: 0.3s;
+  text-decoration: none !important;
+
+  &:hover {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+// section {
+//   padding: 100px 0;
+
+//   @include bp(tablet-sm) {
+//     padding: 80px 0;
+//   }
+// }
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.heading-block {
+  .section-heading {
+    color: #fdfdfd;
+    font-family: "DM Sans";
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 13px;
+    letter-spacing: 2px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: 1px solid #fdfdfd;
+    @include bp(mobile) {
+    }
+  }
+  h2 {
+    color: #fdfdfd;
+    font-family: "Space Grotesk";
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52.8px;
+    letter-spacing: -1.92px;
+    @include bp(mobile) {
+      font-size: 32px;
+      line-height: 35.2px;
+      letter-spacing: -1.28px;
+    }
+  }
+  .description {
+    p {
+      color: #fff;
+      font-family: "DM Sans";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      @include bp(mobile) {
+      }
+    }
+  }
+}
+
+@keyframes scaleMeLeft {
+  0% {
+    transform: rotate(-15deg) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.05;
+  }
+  70% {
+    opacity: 0.2;
+    transform: rotate(-15deg) scale(1);
+  }
+  90% {
+    opacity: 0.05;
+  }
+  100% {
+    transform: rotate(-15deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleMeRight {
+  0% {
+    transform: rotate(15deg) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.05;
+  }
+  70% {
+    opacity: 0.2;
+    transform: rotate(15deg) scale(1);
+  }
+  90% {
+    opacity: 0.05;
+  }
+  100% {
+    transform: rotate(15deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes moveAroundCard {
+  0% {
+    left: -8%;
+    top: -8%;
+  }
+  25% {
+    left: -8%;
+    top: 90%;
+  }
+  50% {
+    left: 96%;
+    top: 90%;
+  }
+  75% {
+    left: 96%;
+    top: -8%;
+  }
+  100% {
+    left: -8%;
+    top: -8%;
+  }
+}
+
+@keyframes letterSpacingAnimate {
+  0% {
+    letter-spacing: 2px;
+  }
+  50% {
+    letter-spacing: 4px;
+  }
+  100% {
+    letter-spacing: 2px;
+  }
+}

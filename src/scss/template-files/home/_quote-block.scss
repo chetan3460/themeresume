@@ -1,0 +1,58 @@
+// Quotes
+.quotes {
+  &--block {
+    position: relative;
+    @include bp(tablet-sm) {
+      min-height: max-content;
+    }
+    p,
+    small {
+      color: var(--color-aqua-700);
+    }
+    h2 {
+      // @include font-rem(90px, 88px);
+      // letter-spacing: -1.6px;
+      // font-weight: 700;
+      // z-index: 1;
+      color: var(--color-aqua-700);
+      text-transform: uppercase;
+      span {
+        display: inline-block;
+      }
+      // background: -webkit-linear-gradient(
+      //   111deg,
+      //   #0bccee 0%,
+      //   rgb(235, 173, 105) 41.082802547770704%,
+      //   rgb(194, 80, 80) 79.29936305732484%,
+      //   #ac1de1 100%
+      // );
+      // background: linear-gradient(
+      //   111deg,
+      //   #0bccee 0%,
+      //   rgb(235, 173, 105) 41.082802547770704%,
+      //   rgb(194, 80, 80) 79.29936305732484%,
+      //   #ac1de1 100%
+      // );
+      // -webkit-background-clip: text !important;
+      // background-clip: text !important;
+      // -webkit-text-fill-color: transparent !important;
+      // text-fill-color: transparent !important;
+      // @include bp(desktop-sm) {
+      //   @include font-rem(55px, 65px);
+      // }
+      // @include bp(tablet-sm) {
+      //   @include font-rem(45px, 55px);
+      // }
+      // @include bp(mobile) {
+      //   @include font-rem(30px, 40px);
+      // }
+      // @include bp(xs) {
+      //   @include font-rem(26px, 35px);
+      // }
+    }
+  }
+  &--wrapper {
+    // max-width: 900px;
+    margin: 0 auto;
+  }
+}

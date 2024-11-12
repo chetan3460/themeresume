@@ -1,0 +1,144 @@
+.btn,
+button,
+.button {
+  padding: 13px 20px;
+  @include font-rem(16px, 17px);
+  font-weight: 700;
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+  border-radius: 72px;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: color(primary, teal);
+  border: 1.5px solid $themeDefault;
+  color: $themeDefault;
+
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  @include transition(all $dur-default ease);
+
+  &:hover {
+    color: #1e1e1e;
+    border: 1.5px solid $themeDefault;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: $themeDefault;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  &:before {
+    left: -20px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  &:after {
+    right: -20px;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+  }
+  &:hover:before {
+    -webkit-animation: criss-cross-left 0.8s both;
+    animation: criss-cross-left 0.8s both;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+  }
+  &:hover:after {
+    -webkit-animation: criss-cross-right 0.8s both;
+    animation: criss-cross-right 0.8s both;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+  }
+  &.secondary {
+    background: #154C4A;
+    border-color: #154C4A;
+    gap: 8px;
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+    &:hover {
+      svg {
+        path {
+          stroke: #154C4A;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@-webkit-keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}

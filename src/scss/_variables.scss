@@ -1,0 +1,137 @@
+/* ==========================================================================
+  COMMON VARIABLES
+  ========================================================================== */
+
+// Color variable map
+$colors: (
+  background: #ffffff,
+  border: #f7ef60,
+  // nested map inception
+    primary:
+    (
+      yellow: #f7ef60,
+      teal: #1b6573,
+      light-teal: #709f9d,
+      base: #1d1e25,
+      black: #000000,
+      grey: #999999,
+      lighten: lighten(#9095a7, 15%),
+      green-trans: transparentize(#31b44b, 0.4),
+    ),
+  secondary: (
+    dark-gray: #9095a7,
+    dark-grayish-blue: #9095a7,
+    dark-blue: #1d1e25,
+    pale-red: #ffefeb,
+    light-gray: #ffefeb,
+  ),
+  yellow: (
+    100: #f7ef60,
+  ),
+  teal: (
+    100: #1b6573,
+    200: #709f9d,
+  ),
+  white: (
+    100: #ffffff,
+    200: #fdfdfd,
+    300: #f1f1f1,
+    400: #f6f6f6,
+  ),
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+// ==========================================================================
+//  COMPONENT SPECIFIC VARIABLES
+//  ==========================================================================
+
+// TYPOGRAPHY
+//   ==========================================================================
+$htmlFontSize: 16px;
+$baseFontSize: 16px;
+$baseFontFamily: "Be Vietnam Pro", sans-serif;
+$headingFontFamily: "Phudu", serif;
+
+$baseLineHeight: 22px;
+$baseTextColor: #9095a7;
+
+$primaryColor: #9095a7;
+$whiteColor: #fff; //
+
+$themeDefault: #f7ef60;
+
+$dur-default: 400ms;
+$cl-orange: #ff471d;
+$cl-dark-orange: #eb2c00;
+
+:root {
+  /*Color  */
+  --color-primary: #f13c46;
+  --color-purple-100: #f2d5ff;
+  --color-purple-700: #5c3972;
+
+  --color-blue-100: #d1f0fc;
+  --color-blue-700: #004ac7;
+
+  --color-green-100: #d4f9d5;
+  --color-green-700: #2d5154;
+
+  --color-aqua-100: #d4fffc;
+  --color-aqua-700: #2a444f;
+
+  --color-orange-100: #ffc29b;
+  --color-brown-700: #5a220c;
+
+  --color-gradient-start: #f42958;
+  --color-gradient-stop: #f42958;
+
+  --color-gray-800: #1f1f1f;
+  --color-gray-900: #141414;
+  --color-red-100: #ffc1c5;
+  --color-red-300: #ff4e5c;
+
+  --color-pink-100: #ffaac7;
+
+  --color-slate-100: #e8fcff;
+  --color-slate-200: #d5f5ff;
+}
+.bg-purple-100 {
+  background-color: var(--color-purple-100);
+}
+.bg-blue-100 {
+  background-color: var(--color-blue-100);
+}
+.bg-slate-100 {
+  background-color: #e8fcff;
+}
+.bg-slate-200 {
+  background-color: #d5f5ff;
+}
+.bg-green-100 {
+  background-color: var(--color-green-100);
+}
+.bg-aqua {
+  background-color: var(--color-aqua-100);
+}
+.bg-orange-100 {
+  background-color: var(--color-orange-100);
+}
+.bg-pink-100 {
+  background-color: var(--color-pink-100);
+}
+.transparent-bg {
+  background-color: transparent;
+}
+.min-h-100vh {
+  min-height: 100vh;
+}
+section {
+  position: relative;
+}

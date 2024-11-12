@@ -1,0 +1,51 @@
+.wp-admin {
+  .acf-tooltip {
+    li {
+      position: relative;
+
+      a {
+        padding-left: 30px;
+
+        &:after {
+          content: "";
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 3px;
+          left: 5px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          transition: all 0.3s ease;
+        }
+
+        &:hover:after {
+          width: 300px;
+          height: 300px;
+          left: -300px;
+          top: 0;
+          background-position: center top;
+        }
+
+        // Define a map for data-layout and image paths
+        $layouts: (
+          "hero_banner": "../../assets/images/cms-icons/hero-banner.webp",
+          "about_us": "../../assets/images/cms-icons/description.webp",
+          "why-webdelite": "../../assets/images/cms-icons/why-webdelite.webp",
+          "about-us": "../../assets/images/cms-icons/about-us.webp",
+          "process_block": "../../assets/images/cms-icons/process.webp",
+          "featured_slide": "../../assets/images/cms-icons/featured.webp",
+          "contact_block": "../../assets/images/cms-icons/contact.webp",
+          "discount_block": "../../assets/images/cms-icons/discount.webp",
+        );
+
+        // Iterate over each layout and apply background image
+        @each $layout, $image-path in $layouts {
+          &[data-layout="#{$layout}"]:after {
+            background-image: url($image-path);
+          }
+        }
+      }
+    }
+  }
+}
