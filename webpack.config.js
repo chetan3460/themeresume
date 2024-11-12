@@ -96,7 +96,7 @@ module.exports = function (env, argv) {
                 new CompressionPlugin() //GZ compression
             ],
             optimization: {
-                minimize: true,
+                minimize: false,
                 minimizer: [
                     new TerserPlugin(),
                     new CssMinimizerPlugin()

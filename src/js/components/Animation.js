@@ -1,10 +1,11 @@
-import tinycolor from 'tinycolor2';
 
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import tinycolor from "tinycolor2";
+
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import SplitType from "split-type";
-import { sine, Back } from "gsap";
-import { min1024 } from "../utils";
+import { Back } from "gsap";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default class Animation {
@@ -24,12 +25,10 @@ export default class Animation {
 
   bindEvents = () => {
     this.fadeInAnimation();
-    this.fadeUpAnimation();
     this.fadeUpStagger();
     this.title_animation();
-
     this.textRevealAnimation();
-    this.textGradientAnimation();
+    // this.textGradientAnimation();
 
     // Function to refresh ScrollTrigger
     const refreshScrollTrigger = () => {
@@ -76,33 +75,6 @@ export default class Animation {
     }
   };
 
-  // fade Up
-  fadeUpAnimation = () => {
-    const fadeUp = document.querySelectorAll(".fade-up");
-    if (fadeUp.length) {
-      fadeUp.forEach((container) => {
-        let fadeUpTimeline = gsap.timeline({
-          scrollTrigger: {
-            trigger: container,
-            start: "15% 100%",
-          },
-        });
-        let delay = container.getAttribute("data-delay");
-        fadeUpTimeline.to(
-          container,
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-          },
-          delay
-        );
-      });
-    }
-
-
-
-  };
 
 
   // fade Up Stagger
@@ -221,37 +193,6 @@ export default class Animation {
       });
     }
 
-    $("[words-slide-up]").each(function (index) {
-      let tl = gsap.timeline({ paused: true });
-      tl.from($(this).find(".word"), { opacity: 0, yPercent: 100, duration: 0.5, ease: "back.out(2)", stagger: { amount: 0.5 } });
-      createScrollTrigger($(this), tl);
-    });
-
-    $("[words-rotate-in]").each(function (index) {
-      let tl = gsap.timeline({ paused: true });
-      tl.set($(this).find(".word"), { transformPerspective: 1000 });
-      tl.from($(this).find(".word"), { rotationX: -90, duration: 0.6, ease: "power2.out", stagger: { amount: 0.6 } });
-      createScrollTrigger($(this), tl);
-    });
-
-    $("[words-slide-from-right]").each(function (index) {
-      let tl = gsap.timeline({ paused: true });
-      tl.from($(this).find(".word"), { opacity: 0, x: "1em", duration: 0.6, ease: "power2.out", stagger: { amount: 0.2 } });
-      createScrollTrigger($(this), tl);
-    });
-
-    $("[letters-slide-up]").each(function (index) {
-      let tl = gsap.timeline({ paused: true });
-      tl.from($(this).find(".char"), { yPercent: 100, duration: 0.2, ease: "power1.out", stagger: { amount: 0.6 } });
-      createScrollTrigger($(this), tl);
-    });
-
-    $("[letters-slide-down]").each(function (index) {
-      let tl = gsap.timeline({ paused: true });
-      tl.from($(this).find(".char"), { yPercent: -120, duration: 0.3, ease: "power1.out", stagger: { amount: 0.7 } });
-      createScrollTrigger($(this), tl);
-    });
-
     $("[letters-fade-in]").each(function (index) {
       let tl = gsap.timeline({ paused: true });
       tl.from($(this).find(".char"), { opacity: 0, duration: 0.2, ease: "power1.out", stagger: { amount: 0.8 } });
@@ -266,7 +207,7 @@ export default class Animation {
 
     // Avoid flash of unstyled content
     gsap.set("[text-split]", { opacity: 1 });
-  }
+  };
 
 
   textRevealAnimation = () => {
@@ -366,6 +307,8 @@ export default class Animation {
         stagger: 0.05
       });
     }
-  }
+  };
+
+
 
 }

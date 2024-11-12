@@ -15,7 +15,7 @@ if (($description) && !$hide_block) :
                 <div class="col-lg-7">
                     <!-- <p class="fs-5 lh-base text-uppercase fw-medium mb-2">My Moto</p> -->
 
-                    <div class="quotes--wrapper text-center">
+                    <div class="quotes--wrapper reveal-type text-center">
                         <?php if ($description) : ?>
                             <h2 class=""><?= $description; ?></h2>
                         <?php endif; ?>

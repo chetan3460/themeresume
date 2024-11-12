@@ -20,10 +20,7 @@ function theme_enqueue_scripts()
     wp_enqueue_style('theme-style', get_template_directory_uri() . '/dist/css/app.min.css', '', $fileversion);
 
     // Scripts
-    // wp_enqueue_script( 'FontAwesome', 'https://kit.fontawesome.com/c6e0cd704f.js');
 
-    // wp_register_script('intl-js', get_stylesheet_directory_uri() . '/src/lib/build/js/intlTelInput.min.js', [], '', true);
-    // wp_enqueue_script('intl-js');
 
 
 
@@ -51,33 +48,20 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 
 
 // Defer javascript files
-add_filter('script_loader_tag', 'async_scripts', 10, 3);
-function async_scripts($tag, $handle, $src)
-{
-    // The handles of the enqueued scripts we want to defer
-    $defer_scripts = array(
-        'app-script',
-    );
-    if (in_array($handle, $defer_scripts)) {
-        return '<script src="' . $src . '" defer="defer"></script>' . "\n";
-    }
-    return $tag;
-}
-
-// Preload styles
-// add_filter('style_loader_tag', 'async_styles', 10, 4);
-
-// function async_styles($tag, $handle, $href, $media)
+// add_filter('script_loader_tag', 'async_scripts', 10, 3);
+// function async_scripts($tag, $handle, $src)
 // {
-//     // The handles of the enqueued styles we want to preload
+//     // The handles of the enqueued scripts we want to defer
 //     $defer_scripts = array(
-//         'theme-style',
+//         'app-script',
 //     );
 //     if (in_array($handle, $defer_scripts)) {
-//         return '<link rel="preload" href="' . $href . '" as="style" media="' . $media . '" type="text/css" onload="this.onload = null;this.rel=\'stylesheet\'">' . "\n";
+//         return '<script src="' . $src . '" defer="defer"></script>' . "\n";
 //     }
 //     return $tag;
 // }
+
+
 
 
 /*

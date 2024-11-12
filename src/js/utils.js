@@ -1,6 +1,12 @@
 
 import Lenis from 'lenis'
 
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import SplitType from "split-type";
+import { Back } from "gsap";
+import tinycolor from "tinycolor2";
+gsap.registerPlugin(ScrollTrigger);
 
 export const importComponent = (element, classID) => {
     // if (element.length && !element.hasClass("init") && inVP(element)) { // for lazy loading

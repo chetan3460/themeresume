@@ -16,6 +16,9 @@ if (($banner_title || $banner_description) && !$hide_block):
     <!-- Start Banner -->
     <section id="home" class="lqd-section  banner--block d-flex align-items-center justify-content-center min-h-100vh bg-purple-100 w-100 position-relative "
         data-section-luminosity="light">
+        <div class="ld-particles-inner" id="lqd-banner-particles" data-particles="true"
+            data-particles-options='{"particles":{"number":{"value":12},"color":{"value":"random"},"shape":{"type":["circle"]},"size":{"value":2},"move":{"out_mode":"out"}},"interactivity":[],"retina_detect":true}'>
+        </div>
 
         <div class="container">
             <div class="row">

@@ -1,5 +1,5 @@
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default class LazyLoad {
@@ -48,30 +48,6 @@ export default class LazyLoad {
             ScrollTrigger.refresh();
         }
 
-        const lazyVideoView = document.querySelectorAll(".lazy-video");
-        if (lazyVideoView.length) {
-            lazyVideoView.forEach((video) => {
-                let videoDataSrc = video.getAttribute("data-src");
-                let newSource = document.createElement("source");
-                newSource.setAttribute("src", videoDataSrc);
-                let loadVideo = () => {
-                    if (!video.classList.contains("loaded")) {
-                        video.classList.add("loaded");
-                        video.appendChild(newSource);
-                        video.removeAttribute("data-src");
-                    }
-                };
-                let offset = video.getAttribute("data-offset");
-                let defaultOffset = 700;
-                let videoTimeline = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: video,
-                        start: `top bottom+=${offset ? offset : defaultOffset}`,
-                        onEnter: loadVideo,
-                    },
-                });
-            });
-            ScrollTrigger.refresh();
-        }
+
     };
 }

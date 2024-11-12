@@ -44,11 +44,13 @@
     "@fancyapps/ui": "^5.0.36",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
+    "fastdom": "^1.0.12",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "lenis": "^1.1.13",
     "split-type": "^0.3.4",
     "swiper": "^8.4.7",
-    "tinycolor2": "^1.6.0"
+    "tinycolor2": "^1.6.0",
+    "tsparticles-engine": "^2.12.0"
   }
 }

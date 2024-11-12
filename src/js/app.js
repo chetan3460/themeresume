@@ -29,6 +29,7 @@ export default new (class App {
       header: this.header,
       htmlBody: this.htmlBody,
     });
+    // new Background();
 
     new Animation();
     new DynamicImports();
