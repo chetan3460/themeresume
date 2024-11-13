@@ -11,7 +11,10 @@
       .shape-circle {
       }
       @include bp(mobile) {
-        @include font-rem(48px, 52px);
+        @include font-rem(35px, 40px);
+      }
+      @include bp(sm) {
+        @include font-rem(25px, 30px);
       }
       img {
         @include size(3rem);

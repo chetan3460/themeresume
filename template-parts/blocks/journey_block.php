@@ -9,7 +9,7 @@ include(locate_template('template-parts/blocks/hide_cosmetics.php', false, false
 if (($heading || $description) && !$hide_block):
 ?>
 
-    <section id="journey" class="lqd-section module-sec journey--block bg-orange-100 min-h-100vh py-5 d-flex align-items-center justify-content-center  overflow-hidden">
+    <section id="journey" class="lqd-section module-sec journey--block bg-orange-100 min-h-100vh pt-5 pb-md-10 pb-8  d-flex align-items-center justify-content-center  overflow-hidden">
         <div class="">
             <div class="row">
                 <div class="col-lg-12 sec-title-animation animation-style2">

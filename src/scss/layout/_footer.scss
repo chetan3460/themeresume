@@ -6,12 +6,12 @@ footer {
   // overflow: hidden;
 }
 @media screen and (min-width: 1200px) {
-  [data-sticky-footer] {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    overflow: hidden;
-  }
+  // [data-sticky-footer] {
+  //   position: -webkit-sticky;
+  //   position: sticky;
+  //   bottom: 0;
+  //   overflow: hidden;
+  // }
 }
 .footer {
   &__inner {

@@ -36,7 +36,7 @@ export default class BannerSlider {
     function bannerAnimation() {
       const header = $("header .header--wrapper");
       const bannerBlock = $(".banner--block");
-      const bannerSlider = $(".banner--block");
+      // const bannerSlider = $(".banner--block");
       const captionTitle = $(".banner--block h1");
       const captionSubTitle = $(".banner--block .banner--intro-text");
 
@@ -60,12 +60,12 @@ export default class BannerSlider {
         },
       });
 
-      gsap.to(bannerSlider, {
-        scale: 1,
-        duration: max767.matches ? duration8000 : duration10000,
-        delay: max767.matches ? duration2000 : duration4000,
-        ease: "Power1.easeOut",
-      });
+      // gsap.to(bannerSlider, {
+      //   scale: 1,
+      //   duration: max767.matches ? duration8000 : duration10000,
+      //   delay: max767.matches ? duration2000 : duration4000,
+      //   ease: "Power1.easeOut",
+      // });
 
       function fullAnimation() {
         gsap.to(header, {

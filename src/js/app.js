@@ -2,6 +2,7 @@
 import Header from './components/Header';
 import DynamicImports from './components/DynamicImports';
 import Animation from './components/Animation';
+// import Background from './components/Background';
 import lenis from './utils';
 import { xGetter, yGetter, xSetter, ySetter, lerp, pointerCurr } from './utils';
 
@@ -103,12 +104,7 @@ export default new (class App {
     const $container = this.wrapper;
     $container.on('click', '.disabled', () => false);
 
-    // Specific Events
-    // this.gotoTop.on('click', () => {
-    //   this.htmlNbody.animate({
-    //     scrollTop: 0,
-    //   });
-    // });
+
     this.gotoTop.on('click', () => {
       lenis.scrollTo(0, { duration: 1.5 }); // Scroll to the top with a smooth animation
     });
@@ -209,7 +205,47 @@ export default new (class App {
 
 
 
+    gsap.utils.toArray('.pinned-gallery').forEach((pinnedGallery) => {
 
+      if (pinnedGallery && pinnedGallery.classList.contains('random-img-ratation')) {
+        const rotatedImages = pinnedGallery.querySelectorAll('.pinned-image:not(:first-child):not(:last-child)');
+        gsap.utils.toArray(rotatedImages).forEach((pImage, i, arr) => {
+          let rotation = i % 2 === 0 ? gsap.utils.random(-4, 0) : gsap.utils.random(0, 4);
+          gsap.set(pImage.querySelector('img'), { rotation: rotation });
+        });
+      }
+
+      const pinnedImages = pinnedGallery.querySelectorAll('.pinned-image');
+
+      pinnedImages.forEach((pImage, i, arr) => {
+        if (i < arr.length - 1) {
+          const durationMultiplier = arr.length - i - 1;
+
+          ScrollTrigger.create({
+            trigger: pImage,
+            start: function () {
+              const centerPin = (window.innerHeight - pImage.querySelector('img').offsetHeight) / 2;
+              return "top +=" + centerPin;
+            },
+            end: function () {
+              const durationHeight = pImage.offsetHeight * durationMultiplier;
+              return "+=" + durationHeight;
+            },
+            pin: true,
+            pinSpacing: false,
+            scrub: true,
+            animation: gsap.to(pImage.querySelector('img'), {
+              scale: 0.95,
+              opacity: 1,
+              zIndex: 0,
+              duration: 1,
+              ease: Linear.easeNone
+            }),
+          });
+        }
+      });
+
+    });
 
 
 

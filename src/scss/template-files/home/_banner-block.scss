@@ -10,10 +10,10 @@
         @include font-rem(95px, 100px);
       }
       @include bp(sm) {
-        @include font-rem(74px, 80px);
+        @include font-rem(65px, 70px);
       }
       @include bp(xs) {
-        @include font-rem(65px, 70px);
+        @include font-rem(48px, 56px);
       }
     }
     .line {

@@ -47,6 +47,7 @@
       .skills_list-item {
         color: var(--color-green-700);
         @include font-rem(18px, 22px);
+        display: fl;
       }
       .skills_divider {
         background-color: #3f3f3f;

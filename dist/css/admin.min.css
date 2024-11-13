@@ -1,3 +1,54 @@
-.wp-admin .acf-tooltip li{position:relative}.wp-admin .acf-tooltip li a{padding-left:30px}.wp-admin .acf-tooltip li a:after{content:"";width:20px;height:20px;position:absolute;top:3px;left:5px;background-size:contain;background-repeat:no-repeat;background-position:center;transition:all .3s ease}.wp-admin .acf-tooltip li a:hover:after{width:300px;height:300px;left:-300px;top:0;background-position:center top}.wp-admin .acf-tooltip li a[data-layout=hero_banner]:after{background-image:url("../../assets/images/cms-icons/hero-banner.webp")}.wp-admin .acf-tooltip li a[data-layout=about_us]:after{background-image:url("../../assets/images/cms-icons/description.webp")}.wp-admin .acf-tooltip li a[data-layout=why-webdelite]:after{background-image:url("../../assets/images/cms-icons/why-webdelite.webp")}.wp-admin .acf-tooltip li a[data-layout=about-us]:after{background-image:url("../../assets/images/cms-icons/about-us.webp")}.wp-admin .acf-tooltip li a[data-layout=process_block]:after{background-image:url("../../assets/images/cms-icons/process.webp")}.wp-admin .acf-tooltip li a[data-layout=featured_slide]:after{background-image:url("../../assets/images/cms-icons/featured.webp")}.wp-admin .acf-tooltip li a[data-layout=contact_block]:after{background-image:url("../../assets/images/cms-icons/contact.webp")}.wp-admin .acf-tooltip li a[data-layout=discount_block]:after{background-image:url("../../assets/images/cms-icons/discount.webp")}
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/css-unicode-loader/index.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/wp-admin.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+.wp-admin .acf-tooltip li {
+  position: relative;
+}
+.wp-admin .acf-tooltip li a {
+  padding-left: 30px;
+}
+.wp-admin .acf-tooltip li a:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+.wp-admin .acf-tooltip li a:hover:after {
+  width: 300px;
+  height: 300px;
+  left: -300px;
+  top: 0;
+  background-position: center top;
+}
+.wp-admin .acf-tooltip li a[data-layout=hero_banner]:after {
+  background-image: url("../../assets/images/cms-icons/hero-banner.webp");
+}
+.wp-admin .acf-tooltip li a[data-layout=about_us]:after {
+  background-image: url("../../assets/images/cms-icons/description.webp");
+}
+.wp-admin .acf-tooltip li a[data-layout=why-webdelite]:after {
+  background-image: url("../../assets/images/cms-icons/why-webdelite.webp");
+}
+.wp-admin .acf-tooltip li a[data-layout=about-us]:after {
+  background-image: url("../../assets/images/cms-icons/about-us.webp");
+}
+.wp-admin .acf-tooltip li a[data-layout=process_block]:after {
+  background-image: url("../../assets/images/cms-icons/process.webp");
+}
+.wp-admin .acf-tooltip li a[data-layout=featured_slide]:after {
+  background-image: url("../../assets/images/cms-icons/featured.webp");
+}
+.wp-admin .acf-tooltip li a[data-layout=contact_block]:after {
+  background-image: url("../../assets/images/cms-icons/contact.webp");
+}
+.wp-admin .acf-tooltip li a[data-layout=discount_block]:after {
+  background-image: url("../../assets/images/cms-icons/discount.webp");
+}
 
 /*# sourceMappingURL=admin.min.css.map*/
