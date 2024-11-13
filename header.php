@@ -23,13 +23,13 @@ if (!empty($header_cta)) {
     <!-- Custom scripts or code in header from theme settings -->
 
     <?php wp_head(); ?>
-    <?php echo $header_scripts ?>
+    <!-- </?php echo $header_scripts ?> -->
 
 </head>
 
 
 <body <?php body_class(); ?>>
-    <?php echo $body_scripts ?>
+    <!-- </?php echo $body_scripts ?> -->
 
     <?php wp_body_open(); ?>
 
