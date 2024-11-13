@@ -3,6 +3,8 @@ const horizontalMovement = $(".h-movement");
 const parallaxUp = $(".parallax-block-wrap");
 const SkillsRow = $(".skills--block");
 const lazy = $(".lazy-image,.lazy-video");
+const ProjectBlock = $(".projects--block");
+
 
 // Set 'mobile' to false to prevent JS from loading on mobile. Change the media query as desired in DynamicImports.js
 
@@ -31,6 +33,11 @@ export const componentList = [
   {
     element: SkillsRow,
     className: "SkillsRow",
+    mobile: true,
+  },
+  {
+    element: ProjectBlock,
+    className: "ProjectBlock",
     mobile: true,
   },
 ];

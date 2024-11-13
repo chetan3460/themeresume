@@ -28,7 +28,7 @@ export default class Animation {
     this.fadeUpStagger();
     this.title_animation();
     this.textRevealAnimation();
-    // this.textGradientAnimation();
+    this.textGradientAnimation();
 
     // Function to refresh ScrollTrigger
     const refreshScrollTrigger = () => {

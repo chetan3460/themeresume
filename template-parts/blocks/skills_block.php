@@ -28,7 +28,7 @@ if (($heading || $description) && !$hide_block):
                         <?php endif; ?>
 
                     </div>
-                    <div class="skills--grid mt-lg-7 mt-5">
+                    <div class="skills--grid mt-5">
                         <?php if (have_rows('skills_items')): ?>
 
                             <div class="skills--container">

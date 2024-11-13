@@ -13,7 +13,7 @@ if (($heading || $description) && !$hide_block):
         <div class="">
             <div class="row">
                 <div class="col-lg-12 sec-title-animation animation-style2">
-                    <div class="journey--wrapper d-flex align-items-center justify-content-center flex-column gap-5 mb-5 text-center">
+                    <div class="journey--wrapper d-flex align-items-center justify-content-center flex-column gap-md-5 gap-4 text-center">
                         <?php if ($heading) : ?>
                             <h2 class="title-animation">
                                 <?= $heading; ?>
@@ -69,13 +69,6 @@ if (($heading || $description) && !$hide_block):
         </div>
 
     </section>
-
-
-
-
-
-
-
 
 <?php
 endif;
