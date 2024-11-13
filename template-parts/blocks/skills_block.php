@@ -45,21 +45,25 @@ if (($heading || $description) && !$hide_block):
                                         <?php endif; ?>
 
                                         <?php if (have_rows('skills_list')): ?>
-                                            <div class="skills_list d-flex align-items-center justify-content-end gap-3">
+                                            <div class="skills_list d-flex flex-sm-row flex-column align-items-center justify-content-end gap-3">
                                                 <?php
-                                                $is_first = true;
                                                 while (have_rows('skills_list')): the_row();
                                                     $skills_title = get_sub_field('skills_title');
-                                                    if (!$is_first) : ?>
+                                                ?>
+
+
+
+                                                    <div class="skills_list-item d-flex align-items-center gap-2">
                                                         <div class="skills_divider"></div>
-                                                    <?php endif; ?>
-                                                    <div class="skills_list-item">
+
                                                         <?= htmlspecialchars($skills_title); ?>
                                                     </div>
-                                                    <?php $is_first = false; ?>
+
                                                 <?php endwhile; ?>
                                             </div>
                                         <?php endif; ?>
+
+
                                         <div class="line-under"></div>
                                     </div>
                                 <?php endwhile; ?>
