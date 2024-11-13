@@ -91,7 +91,7 @@ $follow = get_field('follow_us', 'option');
                                         <?php endif; ?>
                                         <?php if ($instagram) : ?>
                                             <li class="w-auto inline-flex mx-45">
-                                                <a href="<?= $instagram ?>" class="" target="_blank"> Tw.</a>
+                                                <a href="<?= $instagram ?>" class="" target="_blank"> In.</a>
                                             </li>
                                         <?php endif; ?>
                                         <?php if ($linkedin) : ?>
