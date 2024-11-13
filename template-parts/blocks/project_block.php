@@ -5,7 +5,7 @@ $project_items = get_sub_field('project_items');
 // Hiding and cosmetics/
 include(locate_template('template-parts/blocks/hide_cosmetics.php', false, false));
 
-if (($project_itemsproject_items || $description) && !$hide_block):
+if (($project_items || $description) && !$hide_block):
 ?>
 
 
