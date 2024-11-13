@@ -51,7 +51,7 @@ if (!empty($header_cta)) {
 
                     <!-- Logo -->
                     <div class="header-module module-logo no-rotate navbar-brand-solid navbar-brand-circle py-15">
-                        <a class="navbar-brand inline-flex text-18" href="./index-adaptive-colors.html" rel="home">
+                        <a class="navbar-brand inline-flex text-18" href="<?php echo get_site_url(); ?>" rel="home">
                             <span class="navbar-brand-inner">
                                 CD
                             </span>
