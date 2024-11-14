@@ -1,4 +1,8 @@
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 import Header from './components/Header';
 import DynamicImports from './components/DynamicImports';
 import Animation from './components/Animation';
