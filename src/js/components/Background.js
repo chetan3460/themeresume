@@ -45,7 +45,18 @@ export default class Background {
             window.liquidBodyBg = window.$liquidBody.css("backgroundColor");
             window.liquidContentsBg = window.$liquidContents.css("backgroundColor");
         };
-
+        const fastdomPromised = {
+            measure: (fn) => {
+                return new Promise((resolve) => {
+                    fastdom.measure(() => resolve(fn()));
+                });
+            },
+            mutate: (fn) => {
+                return new Promise((resolve) => {
+                    fastdom.mutate(() => resolve(fn()));
+                });
+            },
+        };
 
         liquidElements(jQuery);
 

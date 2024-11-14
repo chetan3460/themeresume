@@ -4,7 +4,7 @@ import tinycolor from "tinycolor2";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import SplitType from "split-type";
-import { Back } from "gsap";
+import { Back, Power2 } from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 

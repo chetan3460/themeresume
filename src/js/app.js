@@ -1,12 +1,13 @@
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Power2 } from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 import Header from './components/Header';
 import DynamicImports from './components/DynamicImports';
 import Animation from './components/Animation';
-// import Background from './components/Background';
+import Background from './components/Background';
 import lenis from './utils';
 import { xGetter, yGetter, xSetter, ySetter, lerp, pointerCurr } from './utils';
 
@@ -34,7 +35,7 @@ export default new (class App {
       header: this.header,
       htmlBody: this.htmlBody,
     });
-    // new Background();
+    new Background();
 
     new Animation();
     new DynamicImports();

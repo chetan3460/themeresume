@@ -25,13 +25,13 @@ function theme_enqueue_scripts()
 
 
 
-    wp_enqueue_script('fa', get_template_directory_uri() . "/src/js/fastdom.min.js", array("jquery"), rand(1000, 5000), true);
-    wp_enqueue_script('cf', get_template_directory_uri() . "/src/js/tinycolor-min.js", array("jquery"), rand(1000, 5000), true);
-    wp_enqueue_script('as', get_template_directory_uri() . "/src/js/gsap.min.js", array("jquery"), rand(1000, 5000), true);
-    wp_enqueue_script('scs', get_template_directory_uri() . "/src/js/ScrollTrigger.min.js", array("jquery"), rand(1000, 5000), true);
+    // wp_enqueue_script('fa', get_template_directory_uri() . "/src/js/fastdom.min.js", array("jquery"), rand(1000, 5000), true);
+    // wp_enqueue_script('cf', get_template_directory_uri() . "/src/js/tinycolor-min.js", array("jquery"), rand(1000, 5000), true);
+    // wp_enqueue_script('as', get_template_directory_uri() . "/src/js/gsap.min.js", array("jquery"), rand(1000, 5000), true);
+    // wp_enqueue_script('scs', get_template_directory_uri() . "/src/js/ScrollTrigger.min.js", array("jquery"), rand(1000, 5000), true);
 
 
-    wp_enqueue_script('bg', get_template_directory_uri() . "/src/js/bg.js", array("jquery"), rand(1000, 5000), true);
+    // wp_enqueue_script('bg', get_template_directory_uri() . "/src/js/bg.js", array("jquery"), rand(1000, 5000), true);
 
 
     wp_enqueue_script('app-script', get_template_directory_uri() . '/dist/js/app-' . $fileversion . '.min.js', array('jquery'), $fileversion, true);
