@@ -7,7 +7,7 @@ include(locate_template('template-parts/blocks/hide_cosmetics.php', false, false
 
 if (($description) && !$hide_block) :
 ?>
-    <section id="quotes" class=" lqd-section module-sec quotes--block bg-aqua  py-5 d-flex align-items-center justify-content-center fade-in" data-section-luminosity="light">
+    <section id="quotes" class=" lqd-section module-sec quotes--block bg-aqua  py-5 d-flex align-items-center justify-content-center" data-section-luminosity="light">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-7">

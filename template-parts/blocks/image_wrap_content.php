@@ -16,7 +16,7 @@ include(locate_template('template-parts/blocks/hide_cosmetics.php', false, false
 if (($highlighted_text || $rest_heading || $medium_image || $large_image || $small_image) && !$hide_block) :
 
 ?>
-    <section id="about" class="lqd-section module-sec about--block ticker-text--block h-movement  py-5 bg-blue-100 overflow-hidden fade-in" data-section-luminosity="light">
+    <section id="about" class="lqd-section module-sec about--block ticker-text--block h-movement  py-5 bg-blue-100 overflow-hidden" data-section-luminosity="light">
         <div class="text-center d-flex gap-md-5 gap-4 flex-column sec-title-animation animation-style2">
 
             <h2 class="title-animation"><?= $heading; ?></h2>

@@ -11,7 +11,7 @@ if (($heading || $description) && !$hide_block):
     <!-- Banner Block -->
 
 
-    <section id="skills" class="skills--block lqd-section module-sec bg-green-100 min-h-100vh py-5 fade-in overflow-hidden" data-section-luminosity="light">
+    <section id="skills" class="skills--block lqd-section module-sec bg-green-100 min-h-100vh py-5  overflow-hidden" data-section-luminosity="light">
         <div class="container">
             <div class="row">
                 <div class="col-12 sec-title-animation animation-style2">
